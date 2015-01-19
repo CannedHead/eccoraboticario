@@ -98,6 +98,69 @@ textarea {
 
 
 
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+    
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+    
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:-1;
+}
+
+.logo{
+  position:relative;
+  width:30%;
+  left: 50%;
+  margin-left: -15%;
+}
+
+.purple_circle{
+  position: relative;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px; 
+  background-color: #292B64;
+  color:#FFF;
+  left:50%;
+  margin-left: -150px;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  text-align: center;
+}
+
+.purple_circle img{
+  width:300px;
+  position: absolute;
+  margin-left: -150px;
+  top: 90px;
+}
+
+.purple_circle p{
+  padding: 70px 25px 0px;
+  font-size: 0.85em;
+}
+
+.botellas{
+  position:absolute;
+  width:60%;
+  bottom:0;
+  left: 50%;
+  margin-left: -30%;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
 
 
 
