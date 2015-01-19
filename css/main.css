@@ -116,9 +116,9 @@ img.bg {
 
 .logo{
   position:relative;
-  width:30%;
+  width:300px;
   left: 50%;
-  margin-left: -15%;
+  margin-left: -150px;
 }
 
 .purple_circle{
