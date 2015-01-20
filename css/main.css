@@ -142,8 +142,13 @@ img.bg {
   top: 90px;
 }
 
-.purple_circle p{
-  padding: 70px 25px 0px;
+.purple_circle .hero{
+  padding: 95px 25px 0px;
+  font-size: 0.85em;
+}
+
+.purple_circle .hero_2{
+  padding: 25px 25px 0px;
   font-size: 0.85em;
 }
 
