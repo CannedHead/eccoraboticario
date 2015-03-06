@@ -1,0 +1,10 @@
+AddDefaultCharset UTF-8
+<IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteBase /demo2
+        RewriteCond %{HTTP_HOST} ^mathpdq\.com
+        RewriteRule ^(.*)$ http://www.mathpdq.com/demo2/$1 [R=permanent,L]
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
