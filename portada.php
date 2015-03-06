@@ -93,7 +93,8 @@ include('inc/header.php'); ?>
 				</ul>
 					<div class="col-md-6 col-md-offset-3">
 						<div class="gallery clearfix">
-						<a href="images/fullscreen/6.jpg" rel="prettyPhoto[gallery1]" class="gallery_button">GALERÍA DE FOTOS</a>
+						<a href="/img/lab3.png" rel="prettyPhoto[gallery1]" class="gallery_button">GALERÍA DE FOTOS</a>
+						<a href="/img/lab4.png" rel="prettyPhoto[gallery1]"></a>
 						</div>
 					</div>
 
