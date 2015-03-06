@@ -219,7 +219,7 @@ img.bg {
 
 .hero{
   padding:  3.5% 7% 0px 0px;
-  margin-top: 15.5%;
+  margin-top: 16.5%;
 }
 
 #section1 p{
@@ -320,6 +320,11 @@ transition: all 0.9s;
   
 
 }
+
+.pp_social{
+  display: none !important; 
+}
+
 
 
 .c2_lab h2{
