@@ -400,11 +400,156 @@ transition: all 0.9s;
  Ingresdientes
    ========================================================================== */
 
+
+
+
+
 .line_ingre{
   margin-top: 3%;
   padding:0% 4%;  
 }
 
+h1 {
+  text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.75);
+  margin: 0;
+  color: #dfdbdb;
+  font-weight: 400;
+  font-size: 60px;
+  font-family: Myriad Pro;
+  line-height: 60px;
+  cursor: default;
+}
+
+.icon {
+  display: block;
+  float: left;
+  margin: 5%;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+}
+
+.button {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: all 0.145s 0 ease-out;
+  -o-transition: all 0.145s 0 ease-out;
+  -webkit-transition: all 0.145s 0;
+  -webkit-transition-delay: ease-out;
+  transition: all 0.145s 0 ease-out;
+  background: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 75%);
+  background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 75%);
+  background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 75%);
+  position: relative;
+  display: block;
+  color: white;
+  text-decoration: none;
+  line-height: 20px;
+  cursor: pointer;
+  -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px 0 rgba(255, 255, 25, 0.06);
+  -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px 0 rgba(255, 255, 25, 0.06);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px 0 rgba(255, 255, 25, 0.06);
+}
+.button .tooltip {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+  -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4), 0 3px 7px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4), 0 3px 7px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4), 0 3px 7px 2px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 5%;
+  left: -30%;
+  z-index: 10;
+  display: block;
+  visibility: hidden;
+  padding: 4%;
+  background-color: rgba(41, 43, 100, 0.8) ; 
+  color: #fff; 
+  width: 300px;
+  height: auto;
+  opacity: 0;
+
+
+  font-family: "Georgia", serif;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 0.9em; 
+  -moz-transition: all 0.2s 0 ease-in;
+  -o-transition: all 0.2s 0 ease-in;
+  -webkit-transition: all 0.2s 0;
+  -webkit-transition-delay: ease-in;
+  transition: all 0.2s 0 ease-in;
+}
+
+.button .tooltip a {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: white -moz-linear-gradient(bottom, #d0cbcb 15%, #e9e5e5 100%);
+  background: white -webkit-linear-gradient(bottom, #d0cbcb 15%, #e9e5e5 100%);
+  background: white linear-gradient(to top, #d0cbcb 15%, #e9e5e5 100%);
+  float: left;
+  width: 44px;
+  height: 36px;
+  -moz-box-shadow: 1px 0 1px 0 rgba(0, 0, 0, 0.15) inset, -1px 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 1px 0 rgba(255, 255, 255, 0.8) inset, 0 -1px 1px 0 rgba(157, 148, 148, 0.8) inset;
+  -webkit-box-shadow: 1px 0 1px 0 rgba(0, 0, 0, 0.15) inset, -1px 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 1px 0 rgba(255, 255, 255, 0.8) inset, 0 -1px 1px 0 rgba(157, 148, 148, 0.8) inset;
+  box-shadow: 1px 0 1px 0 rgba(0, 0, 0, 0.15) inset, -1px 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 1px 0 rgba(255, 255, 255, 0.8) inset, 0 -1px 1px 0 rgba(157, 148, 148, 0.8) inset;
+}
+.button .tooltip a i {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.button .tooltip a:last-child {
+  -moz-border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 4px 4px 0;
+}
+.button .tooltip a:first-child {
+  -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px 0 0 4px;
+}
+.button .tooltip a:hover {
+  background: #e2dfdf -moz-linear-gradient(bottom, #e2dfdf -20%, #c8c0c0 70%);
+  background: #e2dfdf -webkit-linear-gradient(bottom, #e2dfdf -20%, #c8c0c0 70%);
+  background: #e2dfdf linear-gradient(to top, #e2dfdf -20%, #c8c0c0 70%);
+  -moz-box-shadow: 1px 0 1px 0 rgba(0, 0, 0, 0.15) inset, -1px 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 1px 0 rgba(255, 255, 255, 0.8) inset, 0 -1px 1px 0 rgba(157, 148, 148, 0.8) inset;
+  -webkit-box-shadow: 1px 0 1px 0 rgba(0, 0, 0, 0.15) inset, -1px 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 1px 0 rgba(255, 255, 255, 0.8) inset, 0 -1px 1px 0 rgba(157, 148, 148, 0.8) inset;
+  box-shadow: 1px 0 1px 0 rgba(0, 0, 0, 0.15) inset, -1px 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 1px 0 rgba(255, 255, 255, 0.8) inset, 0 -1px 1px 0 rgba(157, 148, 148, 0.8) inset;
+}
+.button:hover {
+  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.1) 110%);
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.1) 110%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.1) 110%);
+  -moz-transition: all 0.145s 0 ease-in;
+  -o-transition: all 0.145s 0 ease-in;
+  -webkit-transition: all 0.145s 0;
+  -webkit-transition-delay: ease-in;
+  transition: all 0.145s 0 ease-in;
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25) inset, 0 1px 1px 0 rgba(255, 255, 25, 0.08);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25) inset, 0 1px 1px 0 rgba(255, 255, 25, 0.08);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25) inset, 0 1px 1px 0 rgba(255, 255, 25, 0.08);
+}
+.button:hover .tooltip {
+  -moz-transition: all 0.2s 0.1s ease-out;
+  -o-transition: all 0.2s 0.1s ease-out;
+  -webkit-transition: all 0.2s 0.1s;
+  -webkit-transition-delay: ease-out;
+  transition: all 0.2s 0.1s ease-out;
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
 
 
 
@@ -414,16 +559,17 @@ Contacto
 
 .contacto h1{
   color: #404C72;
-  font-family: "Georgia", serif;
-  font-style: italic;
-  text-align: center;
-  letter-spacing: 5px;
-  border:solid 1px #404C72;
-  width: 30%;
-  margin-left: 35%; 
-  height: 48px;
-  padding: 0%;
-  margin-top:5%;
+font-family: "Georgia",serif;
+font-style: italic;
+text-align: center;
+letter-spacing: 5px;
+border: 1px solid #404C72;
+width: 30%;
+margin-left: 35%;
+height: 48px;
+padding: 0%;
+margin-top: 6%;
+font-size: 2em;
 }
 
 .contacto p{
