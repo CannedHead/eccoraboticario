@@ -9,19 +9,19 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="/css/jquery.fullPage.css" />
-        <link rel="stylesheet" href="/css/main.css"> 
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+        <link rel="stylesheet" href="css/main.css"> 
         <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 		<!-- This following line is needed only in case of using other easing effect rather than "linear", "swing" or "easeInQuart". You can also add the full jQuery UI instead of this file if you prefer -->
-		<script src="/js/vendor/jquery.easings.min.js"></script>
+		<script src="js/vendor/jquery.easings.min.js"></script>
 		<!-- This following line needed in the case of using the plugin option `scrollOverflow:true` -->
-		<script type="text/javascript" src="/js/vendor/jquery.slimscroll.min.js"></script>
-		<script type="text/javascript" src="/js/jquery.fullPage.min.js"></script>
-        <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+		<script type="text/javascript" src="js/vendor/jquery.slimscroll.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js"></script>
 		<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
     </head>

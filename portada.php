@@ -1,5 +1,44 @@
 <?php
-$pageTitle="Ecora | Inicio";
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$name = trim($_POST["name"]);
+	$email = trim($_POST["email"]);
+	$phone = trim($_POST["phone"]);
+	$message = trim($_POST["message"]);
+	if ($name == "" OR $email == "" OR $message == "" OR $phone == "") {
+	echo "Verifique que todos los campos requeridos esten completos.";
+	exit;
+	}
+	foreach( $_POST as $value ){
+	if( stripos($value,'Content-Type:') !== FALSE ){
+	echo "Existe problemas con la informacion que ingreso.";
+	exit;
+	}
+	}
+	require_once("inc/phpmailer/class.phpmailer.php");
+	$mail = new PHPMailer();
+	if (!$mail->ValidateAddress($email)){
+	echo "You must specify a valid email address.";
+	exit;
+	}
+	$email_body = "";
+	$email_body = $email_body . "Nombre: " . $name . "<br>";
+	$email_body = $email_body . "Email: " . $email . "<br>";
+	$email_body = $email_body . "Telefono: " . $phone . "<br>";
+	$email_body = $email_body . "Mensaje: " . $message;
+	$mail->SetFrom($email, $name);
+	$address = "jd.florez39@gmail.com";
+	$mail->AddAddress($address, "CURE & CIA");
+	$mail->Subject = "CURE & CIA - CONTACTENOS | " . $name;
+	$mail->MsgHTML($email_body);
+	if(!$mail->Send()) {
+	echo "Hubo un problema enviando el correo: " . $mail->ErrorInfo;
+	exit;
+	}
+	header("Location: contacto.php");
+	exit;
+}
+?><?php
+$pageTitle="Eccora del vientre de la tierra";
 $section="estudio";
 include('inc/header.php'); ?>
 <img class="bg" src="img/Madera-01.png" alt="">
@@ -13,7 +52,7 @@ include('inc/header.php'); ?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-10 col-md-offset-1">
 				<img class="inicio-botellas img-responsive" src="img/botellas.svg" alt="">
 			</div>
 		</div>
@@ -25,7 +64,12 @@ include('inc/header.php'); ?>
 			<div class="pull-right hero">
 				<h1>Catálogo </br> de Productos</h1>
 				<br>
-				<p>Ingresa haciendo <a href="#">click aqui</a></p>
+				<p>Ingresa haciendo <a href="#" rel="prettyPhoto[catalogo]">click aqui</a></p>
+
+				<ul class="gallery clearfix">
+				</ul>
+				
+
 			</div>
 		</div>
 	</section>
@@ -69,10 +113,10 @@ include('inc/header.php'); ?>
 			<div class="col-md-6 c1_lab">
 
 				<div class="col-md-11 col-md-offset-1">
-					<img class="img-responsive col-md-6" src="/img/lab4.png">
-					<img class="img-responsive col-md-6" src="/img/lab3.png">
-					<img class="img-responsive col-md-6" src="/img/lab1.png">
-					<img class="img-responsive col-md-6" src="/img/lab2.png">
+					<img class="img-responsive col-md-6" src="img/lab4.png">
+					<img class="img-responsive col-md-6" src="img/lab3.png">
+					<img class="img-responsive col-md-6" src="img/lab1.png">
+					<img class="img-responsive col-md-6" src="img/lab2.png">
 				</div>
 			</div>	
 
@@ -87,12 +131,12 @@ include('inc/header.php'); ?>
 				<br>
 				<ul class="gallery clearfix">
 				</ul>
-					<div class="col-md-6 col-md-offset-3">
-						<div class="gallery clearfix">
-						<a href="/img/lab3.png" rel="prettyPhoto[gallery1]" class="gallery_button">GALERÍA DE FOTOS</a>
-						<a href="/img/lab4.png" rel="prettyPhoto[gallery1]"></a>
-						</div>
+				<div class="col-md-8 col-md-offset-2">
+					<div class="gallery ">
+					<a href="img/lab3.png" rel="prettyPhoto[gallery1]" class="gallery_button">GALERÍA DE FOTOS</a>
+					<a href="img/lab4.png" rel="prettyPhoto[gallery1]"></a>
 					</div>
+				</div>
 
 
 			</div>
@@ -194,7 +238,7 @@ include('inc/header.php'); ?>
 
 			<div class="col-md-2">
 				<a class="button">
-					<img class="img-responsive"	src="img/i1.png" alt="">	
+					<img class="img-responsive"	src="img/i7.png" alt="">	
 					<div class="tooltip">
 						<p><b>7.Manteca de Karite:</b>  Acciones protectoras sobre la piel, es un efectivo emoliente que contiene 
 						altos niveles de lípidos no saponificables, además de un elevada composición de Vitamina E. 
@@ -212,7 +256,7 @@ include('inc/header.php'); ?>
 
 			<div class="col-md-2">
 				<a class="button">
-					<img class="img-responsive"	src="img/i2.png" alt="">	
+					<img class="img-responsive"	src="img/i8.png" alt="">	
 					<div class="tooltip">
 						<p><b>8.Polvo de Perla:</b> Matiza las imperfecciones y tonos irregulares  de la piel y es fácilmente
 						absorbido. Contiene  de 14 a 18 aminoácidos, de los cuales 8 no son sintetizados por el cuerpo 
@@ -227,7 +271,7 @@ include('inc/header.php'); ?>
 
 			<div class="col-md-2">
 				<a class="button">
-					<img class="img-responsive"	src="img/i3.png" alt="">
+					<img class="img-responsive"	src="img/i9.png" alt="">
 					<div class="tooltip">
 						<p><b>9.Hidrosol Rosa Damascena:</b> Es un potente emoliente,  su actividad  humectante  nutre la piel y 
 						ayuda a reducir impurezas. Limpia y humecta. ( Origen :India)<br><br>
@@ -242,7 +286,7 @@ include('inc/header.php'); ?>
 
 			<div class="col-md-2">
 				<a class="button">
-					<img class="img-responsive"	src="img/i4.png" alt="">
+					<img class="img-responsive"	src="img/i10.png" alt="">
 					<div class="tooltip">
 						<p><b>10.Extracto de Betula Pendula:</b> Promueve el crecimiento capilar. Es rica en composición de taninos 
 						y saponinas. Potente antinflamatoria y ayuda a fomentar una circulación sanguínea sana. (Origen: 
@@ -375,6 +419,8 @@ include('inc/header.php'); ?>
 		});
 
 		$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+
+		$(".catalogo:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
 		
 
 

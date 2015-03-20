@@ -145,11 +145,11 @@ img.bg {
    ========================================================================== */
 
 #section0{
-  background: url(/img/marcopag1.svg) no-repeat 0px 0px fixed; 
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
+  background: url('../img/marcopag1.svg') no-repeat 0px 0px fixed; 
+  -webkit-background-size: 100.5% 100%;
+  -moz-background-size: 100.5% 100%;
+  -o-background-size: 100.5% 100%;
+  background-size: 100.5% 100%;
 
 }
 
@@ -164,7 +164,7 @@ img.bg {
 
 .inicio-botellas{
   position:relative;
-  top: -120px;
+  top: -70px;
   z-index: -1;
 }
 
@@ -180,7 +180,7 @@ img.bg {
 }
 
 #section1{
-  background-image: url(/img/section1.png);
+  background-image: url('../img/section1.png');
   background-size: 100% auto;
   height: 100% !important; 
 }
@@ -212,13 +212,13 @@ img.bg {
 }
 
 .c1catalogo{
-  background-image: url(/img/marcopag2.svg);
+  background-image: url('../img/marcopag2.svg');
   height: 100%; 
   background-size: 100% 109%; 
 }
 
 .hero{
-  padding:  3.5% 7% 0px 0px;
+  padding:  5% 7% 0px 0px;
   margin-top: 16.5%;
 }
 
@@ -350,8 +350,9 @@ transition: all 0.9s;
   margin-top: 5%; 
 }
 
-
-
+.gallery{
+  text-align: center;
+}
 
 .gallery_button{
    color: #404C72;
@@ -361,7 +362,7 @@ transition: all 0.9s;
   letter-spacing: 5px;
   padding: 2% 1% ; 
   margin-top: 10%; 
-
+  width:100%;
 
   border-top: solid 1px #404C72;
   border-bottom: solid 1px #404C72;
@@ -370,7 +371,7 @@ transition: all 0.9s;
 
 
 .gallery_button:hover{
-
+  text-decoration: none !important;
 }
 
 .c1_lab img{
@@ -566,7 +567,6 @@ letter-spacing: 5px;
 border: 1px solid #404C72;
 width: 30%;
 margin-left: 35%;
-height: 48px;
 padding: 0%;
 margin-top: 6%;
 font-size: 2em;
